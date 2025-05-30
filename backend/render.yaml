@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: my-web-service
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    repo: https://github.com/kcwebfreelancer/onthego
+    branch: main
+    envVars:
+      - key: NODE_ENV
+        value: development
