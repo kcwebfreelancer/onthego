@@ -2,14 +2,14 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const connectDB = require('./config/db');
 const cors = require('cors');
+const app = express();
 
 const dotenv = require('dotenv').config();
 const port = process.env.PORT || 4000;
 
 connectDB();
-
-const app = express();
 //app.use(cors());
+app.options('*', cors());
 app.use(cors({
   origin: 'https://onthego-frontend-itgq.onrender.com/', // your frontend URL
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
