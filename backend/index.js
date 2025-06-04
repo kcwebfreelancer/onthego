@@ -8,12 +8,13 @@ const dotenv = require('dotenv').config();
 const port = process.env.PORT || 4000;
 
 connectDB();
-const corsOptions = {
-    origin: 'https://onthego-frontend-itgq.onrender.com/',
+app.use(cors({
+    origin: 'https://onthego-frontend-itgq.onrender.com',
+    headers: ["Content-Type"],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true
-}
-app.use(cors(corsOptions));
+}));
+app.options('*', cors());
 
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
