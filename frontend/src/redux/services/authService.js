@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = 'https://onthego-backend-6nra.onrender.com/onthego/api/users';
+const API_URL = 'https://onthego-backend-gw0u.onrender.com/onthego/api/users';
 
 const register = async (userData) => {
     const response = await axios.post(API_URL + '/register', userData);
