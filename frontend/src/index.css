@@ -1,0 +1,93 @@
+body{
+  font-family: 'Montserrat';
+  font-size: 15px;
+}
+a{
+  text-decoration: none;
+}
+.navbar{
+  background-color: rgb(46, 25, 76);
+}
+.navbar .container-fluid{
+  padding:0 30px;
+}
+.navbar-nav {
+  flex-direction: row;
+}
+.navbar-brand{
+  font-weight: bold;
+  color:#FFF;
+}
+.navbar-nav .nav-link {
+  padding-right: .5rem;
+  padding-left: .5rem;
+}
+.nav-link-logout{
+  list-style: none;
+  margin:0;
+  color:#fff;
+}
+.nav-link-logout a{
+  color:#fff;
+}
+.navbar .nav-item a{
+  color:#fff;
+}
+.form{
+  width:600px;
+  margin:30px auto;
+}
+.form button{
+  width:100%;
+}
+.already{
+  display: flex;
+  margin:10px 0 0 0;
+}
+.already a{
+  color:rgb(30, 167, 253);
+  margin:0 0 0 7px;
+}
+.success{
+  color:green;
+  text-align: left;
+}
+.error{
+  color:red;
+  text-align: left;
+}
+.password-group{
+  position: relative;
+}
+.toggle-password{
+  cursor:pointer;
+  position: absolute;
+  top:10px;
+  right:15px;
+  font-size: 12px;
+}
+.sign-out-button{
+  background: transparent;
+  border: 0px;
+  position:relative;
+  top:3px;
+  left:5px;
+  color:#fff;
+}
+.login-bg{
+  background-color: rgb(19, 6, 37);
+  height:100%;
+  width:100%;
+  padding:20px 0;
+}
+.login-form{
+  margin:60px auto;
+  display: inline-block;
+  color:#fff;
+}
+.login-form h1{
+  color:#fff;
+}
+.login-form .fa{
+  color:#333;
+}
