@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useSelector } from 'react-redux'
 
-const API_URL = '/onthego/api'
+const API_URL = 'https://onthego-backend-6nra.onrender.com/onthego/api'
 
 const posts = async () => {
 
