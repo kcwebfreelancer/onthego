@@ -9,7 +9,12 @@ const port = process.env.PORT || 4000;
 connectDB();
 
 const app = express();
-app.use(cors());
+//app.use(cors());
+app.use(cors({
+  origin: 'https://onthego-frontend-itgq.onrender.com/', // your frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: false // if you're using cookies
+}));
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 app.use('/onthego/api/users', require('./routes/userRoutes'));
