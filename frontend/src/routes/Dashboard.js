@@ -8,7 +8,7 @@ const Dashboard = () => {
     const dispatch = useDispatch();
     const { user } = useSelector((state) => state.auth);
     const { posts, isLoading } = useSelector((state) => state.posts);
-
+    
     useEffect(() => {
         if (user === null) {
             navigate('/login')
@@ -18,7 +18,7 @@ const Dashboard = () => {
         if(user){
             dispatch(fetchPosts());
         }
-        
+
     }, [])
     return (
         <>
@@ -28,7 +28,7 @@ const Dashboard = () => {
             }
             <ul>
                 {
-                    posts.posts && posts.posts.length > 0 ? posts.posts.map((post) => {
+                    posts?.posts?.length > 0 ? posts.posts.map((post) => {
                         return (<li key={post._id}>{post.title}</li>)
                     }) : <p>No results found.</p>
                 }
