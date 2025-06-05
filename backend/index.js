@@ -10,11 +10,13 @@ const port = process.env.PORT || 4000;
 connectDB();
 app.use(cors({
     origin: 'https://onthego-frontend-itgq.onrender.com',
+    //origin: 'http://localhost:3000',
     headers: ["Content-Type"],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
 }));
-//app.options('*', cors());
+
 
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
